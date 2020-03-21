@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link href="https://fonts.googleapis.com/css?family=Orbitron:400,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-light bg-blue">
+        <a class="navbar-brand font-weight-bold text-white" href="#">
+            <i class="fa fa-calculator" ></i>
+          <!-- <img src="https://cdn3.vectorstock.com/i/1000x1000/58/47/calculator-app-icon-vector-19605847.jpg"  class="d-inline-block align-top" alt=""> -->
+          Calculator App
+        </a>
+      </nav>
+
+      <div class="container mt-5 minHeight"> 
+          <div class="row justify-content-center">
+            
+            <div class="col-lg-4  col-sm-10 col-10 px-sm-5 px-3 py-2  border border-white">
+                
+                    <div class="row justify-content-center  box">
+                        <h2 class="text-white font-weight-bold text-uppercase floating-text">calculator</h2>
+                    </div>
+                <hr>
+                    <div class="row justify-content-center  mb-2">
+                        <input id="displayBar" readonly type="text" value="" class="border border-primary" > 
+                        
+                     </div>
+                    
+                    <div class="row justify-content-center">
+                        <div class="col-3">
+                            <buttton class="btn btn-info mybtn btn-block btn-block text-center font-weight-bold" value='7' onclick="addTODisplay('7')">7</buttton>
+                        </div>
+                        <div class="col-3">
+                            <buttton class="btn btn-warning mybtn btn-block text-center font-weight-bold" value='8' onclick="addTODisplay('8')">8</buttton>
+                        </div>
+                        <div class="col-3">
+                            <buttton class="btn btn-info mybtn btn-block text-center font-weight-bold" value='9' onclick="addTODisplay('9')">9</buttton>
+                        </div>
+                        <div class="col-3">
+                            <buttton class="btn btn-success mybtn btn-block text-center font-weight-bold"value='+' onclick="addTODisplay('+')">+</buttton>
+                        </div>
+                        
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-3">
+                            <buttton class="btn btn-warning mybtn btn-block text-center font-weight-bold" value='4' onclick="addTODisplay('4')">4</buttton>
+                        </div>
+                        <div class="col-3">
+                            <buttton class="btn btn-info mybtn btn-block text-center font-weight-bold" value='5' onclick="addTODisplay('5')">5</buttton>
+                        </div>
+                        <div class="col-3">
+                            <buttton class="btn btn-warning mybtn btn-block text-center font-weight-bold" value='6' onclick="addTODisplay('6')">6</buttton>
+                        </div>
+                        <div class="col-3">
+                            <buttton class="btn btn-success mybtn btn-block text-center font-weight-bold" value='-' onclick="addTODisplay('-')">-</buttton>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-3">
+                            <buttton class="btn btn-info mybtn btn-block text-center font-weight-bold" value='1' onclick="addTODisplay('1')">1</buttton>
+                        </div>
+                        <div class="col-3">
+                            <buttton class="btn btn-warning mybtn btn-block text-center font-weight-bold" value='2' onclick="addTODisplay('2')">2</buttton>
+                        </div>
+                        <div class="col-3">
+                            <buttton class="btn btn-info mybtn btn-block text-center font-weight-bold" value='3' onclick="addTODisplay('3')">3</buttton>
+                        </div>
+                        <div class="col-3">
+                            <buttton class="btn btn-success mybtn btn-block text-center font-weight-bold" value='X' onclick="addTODisplay('X')">X</buttton>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-3">
+                            <buttton class="btn btn-warning mybtn btn-block text-center font-weight-bold"value='<-' onclick="backSpace()"><-</buttton>
+                        </div>
+                        <div class="col-3">
+                            <buttton class="btn btn-info mybtn btn-block text-center font-weight-bold" value='0' onclick="addTODisplay('0')">0</buttton>
+                        </div>
+                        <div class="col-3">
+                            <buttton class="btn btn-warning mybtn btn-block text-center font-weight-bold"value='C' onclick="clean()">C</buttton>
+                        </div>
+                        <div class="col-3">
+                            <buttton class="btn btn-success mybtn btn-block text-center font-weight-bold" value='/' onclick="addTODisplay('/')">/</buttton>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-3">
+                            <buttton class="btn btn-info mybtn btn-block text-center font-weight-bold"value='(' onclick="addTODisplay('(')">(</buttton>
+                        </div>
+                        <div class="col-3">
+                            <buttton class="btn btn-warning mybtn btn-block text-center font-weight-bold" value='.' onclick="addTODisplay('.')">.</buttton>
+                        </div>
+                        <div class="col-3">
+                            <buttton class="btn btn-info mybtn btn-block text-center font-weight-bold" value=')' onclick="addTODisplay(')')">)</buttton>
+                        </div>
+                        <div class="col-3">
+                            <buttton class="btn btn-primary mybtn btn-block text-center font-weight-bold"value='=' onclick="result()">=</buttton>
+                        </div>
+                        
+                    </div>
+                       
+                    
+                
+            </div>
+          </div>
+      </div>
+
+
+      <footer class="footer"> 
+          <p>copyright 
+          <i class="fa fa-copyright" aria-hidden="true"></i>
+            ICTK
+          </p>
+      </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="calculator.js"></script>
+</body>
+</html>

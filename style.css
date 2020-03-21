@@ -1,0 +1,102 @@
+:root{
+    --mainBlue: rgb(27, 27, 212);
+}
+
+#displayBar{
+    width:98%;
+    height: 4rem;
+    font-size: 2.5rem;
+    color: gray;
+    font-family: 'Orbitron', sans-serif;
+    /* font-weight: 800; */
+    text-align: right;
+    
+}
+input#displayBar.border{
+    border:5px groove gray;
+}
+
+.btn.mybtn{
+    padding: 1rem;
+    margin-right:0.5rem ;
+    margin-bottom:0.5rem;
+    /* width:4rem; */
+}
+html{
+    position: relative;
+}
+
+body{
+
+    margin-bottom: 100px;
+    background-image: linear-gradient(135deg,#2c3e50,#27ae60,#2980b9,#e74c3c,#8e44ad);
+    background-size: 400% 400%;
+    animation: bganimation 15s infinite;
+}
+
+@keyframes bganimation{
+    0%{
+        background-position: 0% 50%;
+        
+    }
+    33%{
+        background-position: 50% 50%;
+
+    }
+    66%{
+        background-position: 100% 100%;
+
+    }
+    100%{
+        background-position: 0% 50%;
+
+    }
+}
+
+.footer{
+    position: absolute;
+    bottom: 0px;
+    height:60px ;
+    background-color: var(--mainBlue);
+    color: white;
+    width: 100%;
+    overflow: hidden;
+}
+.footer p{
+    text-align: center;
+    padding-top: 20px;
+    
+}
+
+.minHeight{
+    min-height: calc(90vh - 114px);
+}
+
+
+div.col-3{
+    padding: 0 5px;
+}
+.btn.btn-warning{
+    color: white;
+
+}
+.floating-text{
+
+    transform: translateY(0);
+    animation: f11 3s infinite linear;
+}
+
+@keyframes f11 {
+
+    30%{
+        transform: translateY(10%) rotate(6deg);
+    }
+    70%{ 
+        transform: translateY(10%) rotate(-6deg);
+    }
+}
+
+.bg-blue{
+    background-color: var(--mainBlue);
+}
+
