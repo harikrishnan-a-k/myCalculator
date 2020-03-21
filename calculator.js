@@ -18,7 +18,7 @@ function addTODisplay(input){
 
 function result(){
     let exp =getDisplayBar();
-    let expv2 =exp.replace('X','*');
+    let expv2 =exp.replace(/X/g,'*');
     let ans=eval(expv2);
     setDisplayBar(ans);
 }
