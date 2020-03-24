@@ -34,3 +34,25 @@ function clean()
 {
     setDisplayBar('');
 }
+document.querySelectorAll('button').forEach(function(el){ 
+    el.addEventListener('click',function(e){
+    let  arg=e.target.value;
+    switch (arg) {
+        case '=':result();
+            
+            break;
+        case 'C':clean();
+            
+            break;
+        case '<-':backSpace();
+            
+            break;
+            
+    
+        default:addTODisplay(arg);
+            break;
+    }
+});
+
+});
+//document.addEventListener()
